@@ -11,9 +11,9 @@ iterations = 10000
 # Simulate data with known alpha
 K = 5
 N = 1000
-alpha <- .7
+alpha = .7
 
-(mod <- paste("f1=~", paste(paste0(by_item_alpha, "*", "x",1:K), collapse = " + ")))
+(mod <- paste("f1=~", paste(paste0(alpha, "*", "x",1:K), collapse = " + ")))
 
 y <- simulateData(mod, sample.nobs=N, standardized = F)
 
